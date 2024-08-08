@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="flex flex-col justify-center items-center text-center w-full -mt-24">
+  <img class="w-36 h-36 mb-10 mx-auto" src="/img/LogoProv.png" alt="logoStart">
+  <div class="bg-white w-[50dvh] h-96 rounded-2xl p-10 px-14">
+    <h1 class="text-3xl font-bold mb-5 -mt-2">Inicio de sesión</h1>
+
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+      <h3 class="text-lg font-semibold text-start mb-2" style="color: #787373">Correo Electronico <span style="color: #e00612">*</span></h3>
+
+      <div class="w-full mx-auto">
+        <input
+          type="email"
+          maxlength="30"
+          class="text-lg w-full border border-gray-300 rounded-xl px-3 py-1 focus:outline-none focus:border-gray-500 mb-4"
+          formControlName="email"
+          style="background: #f3f3f3"
+        >
+
+        @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
+          <small style="color: red;">Correo electrónico invalido</small>
+        }
+
+      </div>
+        <div>
+          <h3 class="text-lg font-semibold text-start mb-2" style="color: #787373">Contraseña <span style="color: #e00612">*</span></h3>
+
+        <div class="w-full relative">
+          <input
+            type="{{ showPassword ? 'text': 'password'}}"
+            maxlength="30"
+            class="text-lg w-full border border-gray-300 rounded-xl px-3 py-1 focus:outline-none focus:border-gray-500 mb-4"
+            formControlName="password"
+            style="background: #f3f3f3"
+          >
+          <span
+            class="absolute top-0 right-0 mr-4 mt-1.5 cursor-pointer"
+            (click)="togglePassword()">
+            @if (showPassword){
+              <i class="fa fa-eye"></i>
+            } @else {
+              <i class="fa fa-eye-slash"></i>
+            }
+          </span>
+        </div>
+
+        @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+          <small style="color: red">Contraseña es requerida</small>
+        }
+
+      </div>
+
+      <h3 class="text-center text-sm font-semibold mb-2 cursor-pointer hover:underline" style="color: #787373">¿Olvidaste tu contraseña?</h3>
+
+      <button
+        type="submit"
+        class="text-white text-xl rounded-xl px-16 py-1 font-semibold inline-block mt-3 bg-[#e00612]"
+        [disabled]="loginForm.invalid"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>
+

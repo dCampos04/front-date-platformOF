@@ -1,0 +1,16 @@
+.text-gray-400 {
+  color: #bbbbbb; /* Color de texto inicial */
+}
+
+.text-blue-800 {
+  color: #1e3553; /* Color de texto al hacer clic */
+}
+
+.border-gray-400 {
+  border-color: #bbbbbb; /* Color del borde inicial */
+}
+
+.border-blue-800 {
+  border-color: #1e3553; /* Color del borde al hacer clic */
+}
+

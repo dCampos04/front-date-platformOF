@@ -1,0 +1,80 @@
+
+<body class="p-36 w-full">
+<body class="px-8 w-full border-2 rounded-2xl bg-white">
+<div class=" bg-white rounded-lg text-center" style="height: 70dvh">
+
+  <!-- En tu componente Angular -->
+  <table class="w-full">
+    <thead>
+    <tr>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        [ngClass]="{
+          'text-blue-800 border-b-2 border-blue-800': activeHeader === 'empresa',
+          'text-gray-400 border-b border-gray-400': activeHeader !== 'empresa'
+        }"
+        (click)="setActiveHeader('empresa')"
+        style="width: 14.28%;"
+      >
+        Empresa
+      </th>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        [ngClass]="{
+          'text-blue-800 border-b-2 border-blue-800': activeHeader === 'servicios',
+          'text-gray-400 border-b border-gray-400': activeHeader !== 'servicios'
+        }"
+        (click)="setActiveHeader('servicios')"
+        style="width: 14.28%;"
+      >
+        Servicios
+      </th>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        [ngClass]="{
+          'text-blue-800 border-b-2 border-blue-800': activeHeader === 'citas',
+          'text-gray-400 border-b border-gray-400': activeHeader !== 'citas'
+        }"
+        (click)="setActiveHeader('citas')"
+        style="width: 14.28%;"
+      >
+        Citas
+      </th>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        [ngClass]="{
+          'text-blue-800 border-b-2 border-blue-800': activeHeader === 'agenda',
+          'text-gray-400 border-b border-gray-400': activeHeader !== 'agenda'
+        }"
+        (click)="setActiveHeader('agenda')"
+        style="width: 14.28%;"
+      >
+        Agenda
+      </th>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        style="width: 14.28%;"
+      ></th>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        style="width: 14.28%;"
+      ></th>
+      <th
+        class="text-lg font-bold border-b py-4 cursor-pointer"
+        style="width: 14.28%;"
+      ></th>
+    </tr>
+    </thead>
+    <tbody class="w-full">
+    <!-- Table rows go here -->
+    </tbody>
+  </table>
+
+
+
+
+</div>
+</body>
+</body>
+
+

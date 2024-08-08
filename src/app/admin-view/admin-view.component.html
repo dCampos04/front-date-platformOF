@@ -1,0 +1,43 @@
+<div class="flex text-black min-h-screen antialiased selection:bg-blue-600 selection:text-white">
+
+
+@if( toggleSideBar ){
+  <div class="flex z-10 text-slate-300 w-72 left-0 min-h-screen " style="background: #1f1f1f">
+    <app-admin-sidemenu />
+  </div>
+} @else {
+  <div class="flex text-slate-300 w-96 left-0 min-h-screen text-center justify-center" style="background: #1f1f1f">
+    <app-admin-side-menu-short />
+  </div>
+  }
+
+  <div class="w-full min-h-full overflow-y-auto" style="background: #e9e9e9">
+
+<!--    <button-->
+<!--      (click)="changeToggleSideMenu()"-->
+<!--      class="bg-[#1f1f1f] p-2"-->
+<!--    >-->
+<!--      <svg-->
+<!--        xmlns="http://www.w3.org/2000/svg"-->
+<!--        fill="none"-->
+<!--        viewBox="0 0 24 24"-->
+<!--        stroke-width="1.5"-->
+<!--        stroke="currentColor"-->
+<!--        class="size-6 text-white">-->
+<!--        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />-->
+<!--      </svg>-->
+
+<!--    </button>-->
+
+    <router-outlet />
+
+  </div>
+
+
+
+
+
+
+
+
+</div>
